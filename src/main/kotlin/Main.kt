@@ -11,10 +11,4 @@ fun main() {
         kevin.takeFirstTask()
 
     kevin.reportStatus()
-
-    val array1 = arrayOf(1,2,3)
-    val array2 = arrayOf(1,2,3)
-
-    print(array1.contentEquals(array2))
-
 }

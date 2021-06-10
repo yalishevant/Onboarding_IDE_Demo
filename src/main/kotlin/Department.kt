@@ -1,0 +1,3 @@
+enum class Department {
+    ADMINISTRATION, RESEARCH, MANAGEMENT, SECURITY
+}

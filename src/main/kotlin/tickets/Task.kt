@@ -1,11 +1,12 @@
+package tickets
+
+import Employee
 import kotlin.random.Random
 
-class Task(val taskName: String) {
-    val id: TaskID = TaskID()
-
+class Task(title: String): Issue(title) {
     var owner: Employee? = null
 
-    fun generateReport(): String {
+    override fun generateReport(): String {
         if (owner != null)
             return "The task is owned by ${owner?.getFirstName()?.first()}. ${owner?.getLastName()}."
         else

@@ -1,3 +1,7 @@
+import tickets.Task
+import tickets.TaskID
+import tickets.TaskManager
+
 class Employee(val fullName: String, var department: Department) {
 
     private val activeTasks: MutableList<Task> = mutableListOf()
@@ -35,7 +39,7 @@ class Employee(val fullName: String, var department: Department) {
     fun reportStatus() {
         println("Tasks in work:")
         val tasks = TaskManager.getEmployeesTasks(this)
-        println(tasks.joinToString(", ") { it.taskName })
+        println(tasks.joinToString(", ") { it.title })
     }
 
     companion object {

@@ -37,9 +37,9 @@ class Employee(val fullName: String, var department: Department) {
     }
 
     fun reportStatus() {
-        println("Tasks in work:")
+        print("Reporter: $fullName \nTasks in work: ")
         val tasks = TaskManager.getEmployeesTasks(this)
-        println(tasks.joinToString(", ") { it.title })
+        println(tasks.joinToString(", ") { "\"${it.title}\"" })
     }
 
     companion object {
